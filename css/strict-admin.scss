@@ -1,0 +1,149 @@
+$color-white: #fff;
+$color: #f6f9f9;
+$color-blue-dark: #2d3950;
+@mixin h3() {
+	h3{
+		color: $color-blue-dark;
+		margin-bottom: 20px;
+	}
+}
+@mixin flex() {
+	.flex-container{
+		padding: 10px 0px;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@mixin add() {
+	.add{
+		margin-top: 15px;
+	}
+}
+@mixin title() {
+	.title{
+		width: 25%;
+		font-weight: bold;
+	}
+}
+@mixin edit() {
+	.edit{
+		margin-left: 15px;
+	}
+}
+@mixin remove() {
+	.remove{
+		margin-right: 15px;
+	}
+}
+@mixin btn() {
+	.btn{
+		margin-left: 5px;
+	}
+}
+@mixin btn-update() {
+	.btn-update{
+		float: left;
+	}
+}
+@mixin btn-cancel() {
+	.btn-cancel{
+		float: right;
+	}
+}
+@mixin btn-add() {
+	.btn-add{
+		margin: 10px 0px;
+		width: 100%;
+	}
+}
+@mixin btn-remove() {
+	.btn-remove{
+		float: right;
+	}
+}
+
+body{
+	background: $color-white;
+}
+
+nav{
+	background-color: #f6f9f9;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+td{
+	max-width: 50px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.navbar{
+	.navbar-toggle{
+		background-color: transparent;
+		margin-top: 15px;
+		span{
+			background-color: $color-blue-dark;
+		}
+	}
+	.collapse{
+		float: right;
+	}
+	.navbar-nav{
+		a{
+			color: $color-blue-dark;
+		}
+		li{
+			padding-top: 10px;
+		}
+	}
+}
+.banner{
+	@include h3;
+	@include add;
+	@include title;
+	@include edit;
+	@include remove;
+	@include flex;
+}
+.edit-banner{
+	@include btn-cancel;
+	@include btn-update;
+}
+
+.add-banner{
+	@include h3;
+	@include btn-add;
+}
+
+.simple{
+	@include h3;
+	@include flex;
+	@include add;
+	@include title;
+	@include edit;
+	@include remove;
+}
+
+.edit-simple{
+	@include btn-cancel;
+	@include btn-update;
+}
+
+.message{
+	@include h3;
+}
+.info-message{
+	@include h3;
+	@include btn-remove;
+}
+
+.social{
+	.form-control{
+		width: 80%;
+	}
+	@include btn;
+	@include flex;
+}
