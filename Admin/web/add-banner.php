@@ -7,9 +7,14 @@
 		$tmp = 	$_FILES['anh']['tmp_name'];
 		move_uploaded_file($tmp, '../image/'.$anh);
 		
-		$sql = "INSERT INTO banner(title, description, anh)VALUES('$title', '$description', '$anh')";
+		$sql = "INSERT INTO banner(title, description, anh, status)VALUES('$title', '$description', '$anh', 'show')";
 		$query = mysqli_query($con,$sql);
-
+		// if ($query) {
+		// 	echo "true";
+		// }else{
+		// 	echo "false" .mysqli_error($con);
+		// }
+		// .die();
 		$sql_max = "SELECT * FROM banner ORDER BY id DESC LIMIT 1";
 		$query_max = mysqli_query($con,$sql_max);
 		$rows = mysqli_fetch_assoc($query_max);

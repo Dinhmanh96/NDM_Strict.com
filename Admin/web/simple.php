@@ -1,7 +1,7 @@
 <?php
 	$sql = "SELECT * FROM simple";
 	$query = mysqli_query($con,$sql);
-	$total = mysqli_num_rows($query);echo $total;
+	$total = mysqli_num_rows($query);
 ?>
 
 

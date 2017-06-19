@@ -46,12 +46,12 @@
 			</nav>
 
 			<?php
-				if (isset($_SESSION['email'])) {
-					echo 'Session email là:' .$_SESSION['email'];
-				}
-				if (isset($_COOKIE['email'])) {
-					echo 'Cookie email là:' .$_COOKIE['email'];
-				}
+				// if (isset($_SESSION['email'])) {
+				// 	echo 'Session email là:' .$_SESSION['email'];
+				// }
+				// if (isset($_COOKIE['email'])) {
+				// 	echo 'Cookie email là:' .$_COOKIE['email'];
+				// }
 				
 				
 				if (isset($_GET['page_layout'])) {
