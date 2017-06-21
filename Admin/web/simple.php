@@ -23,7 +23,7 @@
 		 	for($i = 1; $i<= $totalPages; $i++){
 
 		 		if($page == $i){
-		 			$listPage .='<span style="background-color: #06b9a6; color:#fff;">'.$i.'</span>';
+		 			$listPage .='<span style="background-color: #5bc0de; color:#fff;">'.$i.'</span>';
 		 		}
 		 		else{
 		 			$listPage .= '<a href="main.php?page_layout=simple&page='.$i.'">'.$i.'</a>';
