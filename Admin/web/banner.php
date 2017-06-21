@@ -4,7 +4,6 @@
 		}else{
 			$page =1;
 		}
-		echo $page;
 		$rowsPerPage = 2;
 		$perRow = $page*$rowsPerPage - $rowsPerPage;
 
@@ -20,8 +19,6 @@
 
 	$totalRows = mysqli_num_rows(mysqli_query($con,"SELECT * FROM banner")) ;
 		 	$totalPages = ceil($totalRows/$rowsPerPage);
-		 	echo $totalRows;
-		 	echo $totalPages;
 		 	$listPage = '';
 		 	for($i = 1; $i<= $totalPages; $i++){
 

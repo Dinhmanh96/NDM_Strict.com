@@ -5,7 +5,6 @@
 		}else{
 			$page =1;
 		}
-		echo $page;
 		$rowsPerPage = 3;
 		$perRow = $page*$rowsPerPage - $rowsPerPage;
 		// echo "$totalrows";
@@ -21,8 +20,6 @@
 
 		$totalRows = mysqli_num_rows(mysqli_query($con,"SELECT * FROM message")) ;
 		 	$totalPages = ceil($totalRows/$rowsPerPage);
-		 	echo $totalRows;
-		 	echo $totalPages;
 		 	$listPage = '';
 		 	for($i = 1; $i<= $totalPages; $i++){
 
