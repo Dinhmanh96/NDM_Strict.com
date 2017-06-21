@@ -144,6 +144,7 @@
                         <span  style="display: none;" class="link">
                             <?php echo $rows_showcase['link_project'];?>
                         </span>
+                        
                         <img src="image/<?php echo $rows_showcase['anh'];?>" class="image">
                         <div class="pic-hover flex-container">
                             <button type="button" class="btn btn-primary btn-lg flex-item zoom" data-toggle="modal"

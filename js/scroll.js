@@ -52,6 +52,7 @@ $(document).ready(function() {
     	$(this).parents(".pic").children(".image").addClass("active-modal");
         $(this).parents(".pic").children(".description").addClass("description-active-modal");
         $(".modal-link").html(link);
+        $(".modal-link").attr("href", link);
         $(".modal-title").html(title);
         $(".description-modal").html(description);
     	$("#modal-image").attr("src",src);
@@ -79,6 +80,7 @@ $(document).ready(function() {
                 $(".modal-link").html(link);
                 $(".modal-title").html(title);
                 $(".description-modal").html(description);
+                $(".modal-link").attr("href", link);
 		    	$("#modal-image").attr("src",src);
 	    	});
 	    	$("#modal-image").fadeIn('250');
@@ -105,6 +107,7 @@ $(document).ready(function() {
                 $(".modal-link").html(link);
                 $(".modal-title").html(title);
                 $(".description-modal").html(description);
+                $(".modal-link").attr("href", link);
 	    		$("#modal-image").attr("src",src);
     		});
     		$("#modal-image").fadeIn('250');
@@ -133,6 +136,7 @@ $(document).ready(function() {
                 $(".modal-link").html(link);
                 $(".modal-title").html(title);
                 $(".description-modal").html(description);
+                $(".modal-link").attr("href", link);
 	    		$("#modal-image").attr("src",src);
 	    	});
 	    	$("#modal-image").fadeIn('250');
@@ -156,6 +160,7 @@ $(document).ready(function() {
                 $(".modal-link").html(link);
                 $(".modal-title").html(title);
                 $(".description-modal").html(description);
+                $(".modal-link").attr("href", link);
                 $("#modal-image").attr("src",src);
 
     		});
@@ -163,33 +168,5 @@ $(document).ready(function() {
     	}
     });
 });
-
-// window.onload = function(){
-// 	$form.addEventListener('submit', function(e){
-// 		 e.preventDefault();	
-// 		// var form_state = {
-// 		// };
-// 		var $name = $form.querySelector('#name');
-// 		var $email = $form.querySelector('#email');
-// 		var $message = $form.querySelector('#message');
-// 		if(!$name.value){
-// 			// console.log('invalid name');
-// 			$form.querySelector('.form-validate__name').style.display  = 'block';
-// 		}else{
-// 			$form.querySelector('.form-validate__name').style.display  = 'none';
-// 			if (!$email.value) {
-// 			$form.querySelector('.form-validate__email').style.display = 'block';
-// 			}else{
-// 				$form.querySelector('.form-validate__email').style.display = 'none';
-// 				if (!$message.value) {
-// 					$form.querySelector('.form-validate__message').style.display = 'block';
-// 				}else{
-// 					$form.querySelector('.form-validate__message').style.display = 'none';
-// 					document.getElementById("my-form")[0].submit();
-// 				}
-// 			}
-// 		}
-// 	})
-// }
 
 
