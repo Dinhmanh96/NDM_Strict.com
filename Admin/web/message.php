@@ -1,8 +1,38 @@
 	<?php
-		$sql = "SELECT * FROM message";
+
+		if(isset($_GET['page'])){
+			$page = $_GET['page'];
+		}else{
+			$page =1;
+		}
+		echo $page;
+		$rowsPerPage = 3;
+		$perRow = $page*$rowsPerPage - $rowsPerPage;
+		// echo "$totalrows";
+
+		$sql1 = "SELECT * FROM message";
+		$query1 = mysqli_query($con,$sql1);
+		$totalrows1 = mysqli_num_rows($query1);
+
+
+		$sql = "SELECT * FROM message ORDER BY id DESC LIMIT $perRow, $rowsPerPage";
 		$query = mysqli_query($con,$sql);
 		$totalrows = mysqli_num_rows($query);
-		// echo "$totalrows";
+
+		$totalRows = mysqli_num_rows(mysqli_query($con,"SELECT * FROM message")) ;
+		 	$totalPages = ceil($totalRows/$rowsPerPage);
+		 	echo $totalRows;
+		 	echo $totalPages;
+		 	$listPage = '';
+		 	for($i = 1; $i<= $totalPages; $i++){
+
+		 		if($page == $i){
+		 			$listPage .='<span style="background-color: #06b9a6; color:#fff;">'.$i.'</span>';
+		 		}
+		 		else{
+		 			$listPage .= '<a href="main.php?page_layout=message&page='.$i.'">'.$i.'</a>';
+		 		}
+		 	} 	
 	?>
 
 	<div class="container message">
@@ -10,7 +40,7 @@
 				<hr>
 			
 				<div  class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<h3>All Message (<?php echo $totalrows ?>)</h3>
+					<h3>All Message (<?php echo $totalrows1 ?>)</h3>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<a onclick="return confirm('Bạn muốn xóa tất cả Message ?')" style="float: right;" href="main.php?page_layout=del-message&id=all">
@@ -66,3 +96,40 @@
 		</div>
 		
 	</div>
+
+<center>
+	<nav>
+		<ul class="pagination">
+			<li>
+				<a href="<?php
+				if($page==1){
+					echo "";
+				}
+				else{	
+					$pageprv = $page-1;
+					echo 'main.php?page_layout=message&page='.$pageprv;	
+				}
+				?>" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+
+		<li><?php echo $listPage?></a></li>		
+		<li>
+			<a href="<?php
+			if($page==$totalPages){
+				echo "";
+			}
+			else{
+				$pagenext = $page+1;
+				echo 'main.php?page_layout=message&page='.$pagenext;
+			}
+			?>" aria-label="Previous">
+			<span aria-hidden="true">&raquo;</span>
+			<span class="sr-only">Previous</span>
+			</a>
+		</li>
+	</ul>
+	</nav>
+</center>

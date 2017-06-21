@@ -1,7 +1,37 @@
 <?php
-	$sql = "SELECT * FROM simple";
-	$query = mysqli_query($con,$sql);
-	$total = mysqli_num_rows($query);
+	if(isset($_GET['page'])){
+			$page = $_GET['page'];
+		}else{
+			$page =1;
+		}
+		echo $page;
+		$rowsPerPage = 2;
+		$perRow = $page*$rowsPerPage - $rowsPerPage;
+
+		$sql1 = "SELECT * FROM simple";
+		$query1 = mysqli_query($con,$sql1);
+		$totalrows1 = mysqli_num_rows($query1);
+
+
+		$sql = "SELECT * FROM simple ORDER BY id DESC LIMIT $perRow, $rowsPerPage";
+		$query = mysqli_query($con,$sql);
+		$totalrows = mysqli_num_rows($query);
+	// echo "$totalrows";
+
+	$totalRows = mysqli_num_rows(mysqli_query($con,"SELECT * FROM simple")) ;
+		 	$totalPages = ceil($totalRows/$rowsPerPage);
+		 	echo $totalRows;
+		 	echo $totalPages;
+		 	$listPage = '';
+		 	for($i = 1; $i<= $totalPages; $i++){
+
+		 		if($page == $i){
+		 			$listPage .='<span style="background-color: #06b9a6; color:#fff;">'.$i.'</span>';
+		 		}
+		 		else{
+		 			$listPage .= '<a href="main.php?page_layout=simple&page='.$i.'">'.$i.'</a>';
+		 		}
+		 	} 	
 ?>
 
 
@@ -11,7 +41,7 @@
 			<hr>
 			<div class="row">
 				<div  class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<h3>All Simple & pure design (<?php echo $total ?>)</h3>
+					<h3>All Simple & pure design (<?php echo $totalrows1 ?>)</h3>
 				</div>
 				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 					<a style="float: right;" href="main.php?page_layout=add-simple">
@@ -80,3 +110,39 @@
 		</div>
 	</div>
 </div>
+<center>
+	<nav>
+		<ul class="pagination">
+			<li>
+				<a href="<?php
+				if($page==1){
+					echo "";
+				}
+				else{	
+					$pageprv = $page-1;
+					echo 'main.php?page_layout=simple&page='.$pageprv;	
+				}
+				?>" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+
+		<li><?php echo $listPage?></a></li>		
+		<li>
+			<a href="<?php
+			if($page==$totalPages){
+				echo "";
+			}
+			else{
+				$pagenext = $page+1;
+				echo 'main.php?page_layout=simple&page='.$pagenext;
+			}
+			?>" aria-label="Previous">
+			<span aria-hidden="true">&raquo;</span>
+			<span class="sr-only">Previous</span>
+			</a>
+		</li>
+	</ul>
+	</nav>
+</center>
