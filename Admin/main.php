@@ -11,8 +11,9 @@
 			<title>Admin Strict</title>
 			<meta charset="utf-8">
 		    <meta name="viewport" content="width=device-width, initial-scale=1">
+		    <link rel="shortcut icon" href="../image/favicon.ico">
 		    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-		    
+		    <link rel="shortcut icon" href="../image/favicon.ico">
 		    <link rel="stylesheet" type="text/css" href="../font-awesome-4.7.0/css/font-awesome.css">
 		    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
 		    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>

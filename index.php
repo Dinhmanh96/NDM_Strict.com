@@ -48,6 +48,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/strict.css">
+    <link rel="shortcut icon" href="image/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/media.css">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
@@ -144,7 +145,7 @@
                         <span  style="display: none;" class="link">
                             <?php echo $rows_showcase['link_project'];?>
                         </span>
-                        
+
                         <img src="image/<?php echo $rows_showcase['anh'];?>" class="image">
                         <div class="pic-hover flex-container">
                             <button type="button" class="btn btn-primary btn-lg flex-item zoom" data-toggle="modal"
