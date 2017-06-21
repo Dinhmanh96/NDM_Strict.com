@@ -19,12 +19,11 @@
 			</a>
 		</div>
 	</div>
-	<hr>
 	<?php
 		while ($rows = mysqli_fetch_array($query)) {
 		?>
 	<div class="row">
-		
+			<hr>
 			<div class="col-xs-12 col-sm-5 col-md-3 col-lg-3">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -78,7 +77,6 @@
 				</table>
 			</div>
 	</div>
-	<hr>
 	<?php
 		}
 	?>

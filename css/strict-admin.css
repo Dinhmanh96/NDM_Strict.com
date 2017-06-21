@@ -1,98 +1,143 @@
 body {
   background: #fff; }
 
-nav {
-  background-color: #f6f9f9;
-  position: fixed;
-  top: 0;
-  z-index: 1; }
-
 td {
   max-width: 50px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
 
-.navbar .navbar-toggle {
-  background-color: transparent;
-  margin-top: 15px; }
-  .navbar .navbar-toggle span {
-    background-color: #2d3950; }
-.navbar .collapse {
-  float: right; }
-.navbar .navbar-nav a {
-  color: #2d3950; }
-.navbar .navbar-nav li {
-  padding-top: 10px; }
+.navbar {
+  background-color: #f6f9f9;
+  position: fixed;
+  top: 0;
+  z-index: 1; }
+  .navbar .navbar-toggle {
+    background-color: transparent;
+    margin-top: 15px; }
+    .navbar .navbar-toggle span {
+      background-color: #2d3950; }
+  .navbar .collapse {
+    float: right; }
+  .navbar .navbar-nav a {
+    color: #2d3950; }
+  .navbar .navbar-nav li {
+    padding-top: 10px; }
 
-.banner h3 {
+.banner {
+  min-height: 560px;
+  padding-top: 45px; }
+  .banner h3 {
+    color: #2d3950;
+    margin-bottom: 20px; }
+  .banner .add {
+    margin-top: 15px; }
+  .banner .title {
+    width: 25%;
+    font-weight: bold; }
+  .banner .edit {
+    margin-left: 15px; }
+  .banner .remove {
+    margin-right: 15px; }
+  .banner .flex-container {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between; }
+
+.edit-banner {
+  min-height: 560px;
+  padding-top: 85px; }
+  .edit-banner .btn-cancel {
+    float: right; }
+  .edit-banner .btn-update {
+    float: left; }
+
+.add-banner {
+  min-height: 560px;
+  padding-top: 85px; }
+  .add-banner h3 {
+    color: #2d3950;
+    margin-bottom: 20px; }
+  .add-banner .btn-add {
+    margin: 10px 0px;
+    width: 100%; }
+
+.simple {
+  min-height: 560px;
+  padding-top: 45px; }
+  .simple h3 {
+    color: #2d3950;
+    margin-bottom: 20px; }
+  .simple .flex-container {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between; }
+  .simple .add {
+    margin-top: 15px; }
+  .simple .title {
+    width: 25%;
+    font-weight: bold; }
+  .simple .edit {
+    margin-left: 15px; }
+  .simple .remove {
+    margin-right: 15px; }
+
+.edit-simple {
+  min-height: 560px;
+  padding-top: 85px; }
+  .edit-simple .btn-cancel {
+    float: right; }
+  .edit-simple .btn-update {
+    float: left; }
+
+.message {
+  min-height: 560px;
+  padding-top: 45px; }
+  .message h3 {
+    color: #2d3950;
+    margin-bottom: 20px; }
+
+.info-message {
+  min-height: 560px;
+  padding-top: 85px; }
+  .info-message h3 {
+    color: #2d3950;
+    margin-bottom: 20px; }
+  .info-message .btn-remove {
+    float: right; }
+
+.social {
+  min-height: 560px;
+  padding-top: 85px; }
+  .social .form-control {
+    width: 80%; }
+  .social .btn {
+    margin-left: 5px; }
+  .social .flex-container {
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between; }
+
+.coppy {
   color: #2d3950;
-  margin-bottom: 20px; }
-.banner .add {
-  margin-top: 15px; }
-.banner .title {
-  width: 25%;
-  font-weight: bold; }
-.banner .edit {
-  margin-left: 15px; }
-.banner .remove {
-  margin-right: 15px; }
-.banner .flex-container {
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between; }
+  float: left;
+  clear: both;
+  padding-top: 25px; }
 
-.edit-banner .btn-cancel {
-  float: right; }
-.edit-banner .btn-update {
-  float: left; }
-
-.add-banner h3 {
-  color: #2d3950;
-  margin-bottom: 20px; }
-.add-banner .btn-add {
-  margin: 10px 0px;
-  width: 100%; }
-
-.simple h3 {
-  color: #2d3950;
-  margin-bottom: 20px; }
-.simple .flex-container {
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between; }
-.simple .add {
-  margin-top: 15px; }
-.simple .title {
-  width: 25%;
-  font-weight: bold; }
-.simple .edit {
-  margin-left: 15px; }
-.simple .remove {
-  margin-right: 15px; }
-
-.edit-simple .btn-cancel {
-  float: right; }
-.edit-simple .btn-update {
-  float: left; }
-
-.message h3 {
-  color: #2d3950;
-  margin-bottom: 20px; }
-
-.info-message h3 {
-  color: #2d3950;
-  margin-bottom: 20px; }
-.info-message .btn-remove {
-  float: right; }
-
-.social .form-control {
-  width: 80%; }
-.social .btn {
-  margin-left: 5px; }
-.social .flex-container {
-  padding: 10px 0px;
-  display: flex;
-  justify-content: space-between; }
+.icon-social .fa {
+  float: right;
+  padding-top: 15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 18px 2px;
+  font-size: 15px;
+  background-color: #15a4fa;
+  color: #fff; }
+  .icon-social .fa:hover {
+    color: #0b91e1; }
 
 /*# sourceMappingURL=strict-admin.css.map */

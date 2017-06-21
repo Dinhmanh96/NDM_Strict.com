@@ -13,3 +13,24 @@
 	margin-top: 10px;
 	width: 100%;
 }
+.coppy {
+  color: #2d3950;
+  float: left;
+  clear: both;
+  padding-top: 25px; }
+
+.icon-social .fa {
+  float: right;
+  padding-top: 15px;
+  height: 40px;
+  width: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin: 18px 2px;
+  font-size: 15px;
+  background-color: #15a4fa;
+  color: #fff; }
+  .icon-social .fa:hover {
+    color: #0b91e1; }

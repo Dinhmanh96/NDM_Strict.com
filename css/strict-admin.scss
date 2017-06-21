@@ -1,6 +1,12 @@
 $color-white: #fff;
 $color: #f6f9f9;
 $color-blue-dark: #2d3950;
+@mixin padding-top($value) {
+	padding-top: $value;
+}
+@mixin minheight() {
+	min-height: 560px;
+}
 @mixin h3() {
 	h3{
 		color: $color-blue-dark;
@@ -98,6 +104,8 @@ td{
 	}
 }
 .banner{
+	@include minheight;
+	@include padding-top(45px);
 	@include h3;
 	@include add;
 	@include title;
@@ -106,16 +114,22 @@ td{
 	@include flex;
 }
 .edit-banner{
+	@include minheight;
+	@include padding-top(85px);
 	@include btn-cancel;
 	@include btn-update;
 }
 
 .add-banner{
+	@include minheight;
+	@include padding-top(85px);
 	@include h3;
 	@include btn-add;
 }
 
 .simple{
+	@include minheight;
+	@include padding-top(45px);
 	@include h3;
 	@include flex;
 	@include add;
@@ -125,22 +139,55 @@ td{
 }
 
 .edit-simple{
+	@include minheight;
+	@include padding-top(85px);
 	@include btn-cancel;
 	@include btn-update;
 }
 
 .message{
+	@include minheight;
+	@include padding-top(45px);
 	@include h3;
 }
 .info-message{
+	@include minheight;
+	@include padding-top(85px);
 	@include h3;
 	@include btn-remove;
 }
 
 .social{
+	@include minheight;
+	@include padding-top(85px);
 	.form-control{
 		width: 80%;
 	}
 	@include btn;
 	@include flex;
+}
+.coppy{
+	color: $color-blue-dark;
+	float: left;
+	clear: both;
+	padding-top: 25px;
+}
+.icon-social{
+	.fa{
+		float: right;
+		padding-top: 15px;
+		height: 40px;
+		width: 40px;
+		border-radius: 3px;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		margin: 18px 2px;
+		font-size: 15px;
+		background-color: #15a4fa;
+		color: $color-white;
+		&:hover{
+			color: #0b91e1;
+		}
+	}
 }

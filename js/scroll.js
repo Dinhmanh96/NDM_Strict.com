@@ -33,6 +33,7 @@ $(document).ready(function() {
 		            	flag = false;
 	       			}else{
 	       				flag = true;
+                        // $(".form-frontend button").attr('onclick',return confirm('Bạn muốn xóa tất cả Message ?'));
 	       			}
 	            }
 	        }

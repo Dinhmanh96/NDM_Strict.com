@@ -201,7 +201,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
-                <form class="form" id="my-form" enctype="multipart/form-data" method="post">
+                <form class="form form-frontend" id="my-form" enctype="multipart/form-data" method="post">
                     <div class="form-group form__item">
                         <span class="error" id="name_errors"></span>
                         <label for="name"></label>
