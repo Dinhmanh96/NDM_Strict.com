@@ -63,7 +63,7 @@
 								
 
 								<?php
-									if ($total > 3) {									
+									if ($totalrows1 > 3) {									
 									?>
 										<a onclick="return confirm('Bạn muốn xóa Content này ?')" href="main.php?page_layout=del-simple&id=<?php echo $rows['id']?>" ><button type="button" class="btn btn-danger remove flex-item">Xóa</button></a>
 									<?php

@@ -31,7 +31,7 @@
 		 	} 	
 ?>
 
-<div class="container banner">
+<div class="container banner" style="min-height: 600px;">
 	<hr>
 	<div class="row">
 		<div  class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -58,7 +58,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 flex-container">					
 						<a href="main.php?page_layout=edit-banner&id=<?php echo $rows['id']?>" ><button type="button" class="btn btn-info edit flex-item">Sửa</button></a>
 						<?php
-							if ($totalrows > 2) {									
+							if ($totalrows1 > 2) {									
 							?>
 								<a onclick="return confirm('Bạn muốn xóa Banner này ?')" href="main.php?page_layout=del-banner&id=<?php echo $rows['id']?>" ><button type="button" class="btn btn-danger remove flex-item">Xóa</button></a>
 							<?php

@@ -58,13 +58,13 @@
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 flex-container">					
 						<a href="main.php?page_layout=edit-showcase&id=<?php echo $rows['id']?>" ><button type="button" class="btn btn-info edit flex-item">Sửa</button></a>
 						<?php
-							if ($totalrows > 6) {									
+							if ($totalrows1 > 6) {									
 							?>
-								<a onclick="return confirm('Bạn muốn xóa Banner này ?')" href="main.php?page_layout=del-showcase&id=<?php echo $rows['id']?>" ><button type="button" class="btn btn-danger remove flex-item">Xóa</button></a>
+								<a onclick="return confirm('Bạn muốn xóa Content này ?')" href="main.php?page_layout=del-showcase&id=<?php echo $rows['id']?>" ><button type="button" class="btn btn-danger remove flex-item">Xóa</button></a>
 							<?php
 							}else{
 								?>
-								<a onclick="return alert('Bạn không thể xóa Banner này ?')" href="" ><button type="button" class="btn btn-danger remove flex-item" disabled>Xóa</button></a>
+								<a onclick="return alert('Bạn không thể xóa Content này ?')" href="" ><button type="button" class="btn btn-danger remove flex-item" disabled>Xóa</button></a>
 								<?php
 							}
 						?>

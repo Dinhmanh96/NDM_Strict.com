@@ -5,7 +5,7 @@
 		}else{
 			$page =1;
 		}
-		$rowsPerPage = 3;
+		$rowsPerPage = 7;
 		$perRow = $page*$rowsPerPage - $rowsPerPage;
 		// echo "$totalrows";
 

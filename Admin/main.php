@@ -45,7 +45,7 @@
 				        <li><a href="main.php?page_layout=social">Social</a></li>
 				      </ul>
 				      <ul class="nav navbar-nav navbar-right">
-				        <li><a href="main.php?page_layout=logout"><span class="glyphicon glyphicon-log-in"></span></a></li>
+				        <li><a href="main.php?page_layout=logout"><span class="glyphicon glyphicon-log-out"></span></a></li>
 				      </ul>
 				    </div>
 				</div>
@@ -121,25 +121,23 @@
 					include_once('web/banner.php');
 				}
 			?>
-		<footer class="container copyright">
-		<hr>
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 coppy">
-            <span>Coppyright 2014, STRICT</span>
-        </div>
-        <div class="col-xs-12 col-sm-6 icon-social">
-            <?php
-                while ($rows_social = mysqli_fetch_array($query_social)) {
-                ?>
-                    <a href="<?php echo $rows_social['link'] ;?>"><i class="fa fa-<?php echo $rows_social['class'];?>"></i></a>
-                <?php
-                }
-            ?>
-            
-           
-        </div>
-    </div>
-</footer>
+			<footer class="container copyright">
+				<hr>
+			    <div class="row">
+			        <div class="col-xs-12 col-sm-6 coppy">
+			            <span>Coppyright 2014, STRICT</span>
+			        </div>
+			        <div class="col-xs-12 col-sm-6 icon-social">
+			            <?php
+			                while ($rows_social = mysqli_fetch_array($query_social)) {
+			                ?>
+			                    <a href="<?php echo $rows_social['link'] ;?>"><i class="fa fa-<?php echo $rows_social['class'];?>"></i></a>
+			                <?php
+			                }
+			            ?>
+			        </div>
+			    </div>
+			</footer>
 		</body>
 		</html>
 	<?php	

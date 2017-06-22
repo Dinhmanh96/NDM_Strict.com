@@ -171,6 +171,12 @@ td{
 	float: left;
 	clear: both;
 	padding-top: 25px;
+	@media (max-width: 767px){
+		color: $color-blue-dark;
+		text-align: center;
+		// clear: both;
+		padding-top: 0px;
+	}
 }
 .icon-social{
 	.fa{
@@ -190,4 +196,26 @@ td{
 			color: #0b91e1;
 		}
 	}
+	@media (max-width: 767px){
+		text-align: center;
+		// float: none;
+	
+		.fa{
+			float: none;
+			padding-top: 10px;
+			height: 35px;
+			width: 35px;
+			border-radius: 3px;
+			// cursor: pointer;
+			text-decoration: none;
+			margin: 18px 2px;
+			font-size: 15px;
+			background-color: #15a4fa;
+			color: $color-white;
+			&:hover{
+				color: #0b91e1;
+			}
+		}
+	}
+	
 }
