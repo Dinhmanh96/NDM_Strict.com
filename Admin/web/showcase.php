@@ -11,7 +11,7 @@
 		$query1 = mysqli_query($con,$sql1);
 		$totalrows1 = mysqli_num_rows($query1);
 
-		$sql = "SELECT * FROM showcase ORDER BY id DESC LIMIT $perRow, $rowsPerPage";
+		$sql = "SELECT * FROM showcase ORDER BY id ASC LIMIT $perRow, $rowsPerPage";
 		$query = mysqli_query($con,$sql);
 		$totalrows = mysqli_num_rows($query);
 	// echo "$totalrows";
@@ -117,8 +117,7 @@
 	
 </div>
 
-<center>
-	<nav>
+	<nav class="text-center">
 		<ul class="pagination">
 			<li>
 				<a href="<?php
@@ -132,24 +131,23 @@
 				?>" aria-label="Previous">
 				<span aria-hidden="true">&laquo;</span>
 				<span class="sr-only">Previous</span>
-			</a>
-		</li>
+				</a>
+			</li>
 
-		<li><?php echo $listPage?></a></li>		
-		<li>
-			<a href="<?php
-			if($page==$totalPages){
-				echo "";
-			}
-			else{
-				$pagenext = $page+1;
-				echo 'main.php?page_layout=showcase&page='.$pagenext;
-			}
-			?>" aria-label="Previous">
-			<span aria-hidden="true">&raquo;</span>
-			<span class="sr-only">Previous</span>
-			</a>
-		</li>
-	</ul>
+			<li><?php echo $listPage?></li>		
+			<li>
+				<a href="<?php
+				if($page==$totalPages){
+					echo "";
+				}
+				else{
+					$pagenext = $page+1;
+					echo 'main.php?page_layout=showcase&page='.$pagenext;
+				}
+				?>" aria-label="Previous">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Previous</span>
+				</a>
+			</li>
+		</ul>
 	</nav>
-</center>

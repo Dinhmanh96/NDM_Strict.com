@@ -12,7 +12,7 @@
 		$totalrows1 = mysqli_num_rows($query1);
 
 
-		$sql = "SELECT * FROM banner ORDER BY id DESC LIMIT $perRow, $rowsPerPage";
+		$sql = "SELECT * FROM banner ORDER BY id ASC LIMIT $perRow, $rowsPerPage";
 		$query = mysqli_query($con,$sql);
 		$totalrows = mysqli_num_rows($query);
 	// echo "$totalrows";
@@ -108,10 +108,7 @@
 	?>
 	
 	
-</div>
-
-<center>
-	<nav>
+	<nav class="text-center">
 		<ul class="pagination">
 			<li>
 				<a href="<?php
@@ -128,7 +125,7 @@
 			</a>
 		</li>
 
-		<li><?php echo $listPage?></a></li>		
+		<li><?php echo $listPage?></li>		
 		<li>
 			<a href="<?php
 			if($page==$totalPages){
@@ -145,4 +142,3 @@
 		</li>
 	</ul>
 	</nav>
-</center>
